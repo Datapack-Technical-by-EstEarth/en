@@ -1,0 +1,9 @@
+[book]
+title = "MC Datapacks TH"
+authors = ["EstEarth"]
+language = "th"
+multilingual = false
+src = "src"
+
+[build]
+build-dir = "build"
