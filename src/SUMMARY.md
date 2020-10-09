@@ -19,7 +19,7 @@
 - [Tips/Tricks](./tip_trick/index.md)
   - [pack.mcmeta trick](./tip_trick/pack_mcmeta.md)
 - [Tecnical advice](./technical/index.md)
-  - [์Namespace](./technical/namespace.md)
+  - [Namespace](./technical/namespace.md)
   - [Structure](./technical/structure.md)  
   - [Optimization](./technical/optimization/index.md)
     - [@ selector](./technical/optimization/selector.md)
