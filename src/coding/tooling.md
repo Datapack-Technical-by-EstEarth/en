@@ -1,42 +1,43 @@
-# เครื่องมือ
+# Tooling
 
-นี่เป็นเครื่องมือที่ผมแนะนำมันทำให้สะดวกสบายในการเขียนดาต้าแพ็ค
-## โปรแกรม
+This tooling is recommended by me for its datapacking convenience.
+## Programing
 
-1.ลง [VS Code](https://code.visualstudio.com/) หรือ [VS Code Insider](https://code.visualstudio.com/insiders/) หรือ [VS Codium](https://vscodium.com/) *ผมใช้ Insider
+1.Install [VS Code](https://code.visualstudio.com/) or [VS Code Insider](https://code.visualstudio.com/insiders/) or [VS Codium](https://vscodium.com/) * I use Insider
 
-2.ติดตั้งส่วนขยาย
-- [Data-pack Helper Plus](https://marketplace.visualstudio.com/items?itemName=SPGoding.datapack-language-server) สำหรับช่วยเขียนดาต้าแพ็ค
+2.Extensions
+- [Data-pack Helper Plus](https://marketplace.visualstudio.com/items?itemName=SPGoding.datapack-language-server) various helper functionality to navigate through datapack.
 
-ตัวอย่างคร่าวๆ
+Rough preview
 
 ![alt](https://raw.githubusercontent.com/SPGoding/vscode-datapack-helper-plus/master/img/simple-completions.gif)
 
-- [language-mcfunction](https://marketplace.visualstudio.com/items?itemName=arcensoth.language-mcfunction) สำหรับไฮไลท์สีโค๊ดดาต้าแพ็คเพิ่มเติม
-- [tellraw preview](https://marketplace.visualstudio.com/items?itemName=actuallyboomber.tellraw-preview) เอาไว้ดูตัวอย่างข้อความที่ส่งไปยังผู้เล่น
+- [language-mcfunction](https://marketplace.visualstudio.com/items?itemName=arcensoth.language-mcfunction) This extension provides a syntax highlighting more color feedback.
+- [tellraw preview](https://marketplace.visualstudio.com/items?itemName=actuallyboomber.tellraw-preview) This extension provides text preview for commands that display a message to the player.
 
 ![alt](https://i.imgur.com/9Q64XoT.png)
 
-- [Comment Anchors](https://marketplace.visualstudio.com/items?itemName=ExodiusStudios.comment-anchors) เอาไว้ไฮไลท์คอมเม้นท์และมาร์กสีฟังก์ชั้น `#` ของ `Data-pack Helper Plus`
+- [Comment Anchors](https://marketplace.visualstudio.com/items?itemName=ExodiusStudios.comment-anchors) Highlight comment and color mark `#` function of the `Data-pack Helper Plus`.
 
 ![](./program/comment.png)
 
-- [Material Icon Theme](https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme) เปลี่ยนไอคอนไฟล์สวยๆ อันนี้แล้วแต่ความชอบ
+- [Material Icon Theme](https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme) Change icon for pretty files. This (depends on your preference.)
 
-## ตั้งค่า
+## Setting
 
-ถ้าคุณเขียนดาต้าแพ็คแล้วอยากให้โค๊ดมีลักษณะสวยๆแบบนี้ หรือ ปรับแต่งได้ตามใจชอบ สามารถตั้งค่าได้ดังนี้
+If you datapacking and want the code to look like this or customize it as you like. Can be set as follows.
 
 ![](./program/window.png)
 
-1.หลังจากโหลด Font และติดตั้งแล้ว ก็ตั้งค่า Font โดยไปที่ `Setting -> Text Editor -> Font -> Font Family ใส่ Fira Code`
-- Font [Fira Code](https://github.com/tonsky/FiraCode) (แล้วแต่ความชอบด้วย ที่ผมใช้ Font นี้ส่วนนึงเพราะการเปลี่ยนรูปเครื่องหมาย `<=` `->` ดั่งในภาพ และ `@` มันเท่ห์ดี)
-- Font Ligatures (เปลี่ยนรูปเครื่องหมาย `<=` `->`) -> `Edit in settings.json` -> `"editor.fontLigatures": true`
+1.**Font**
+- Font [Fira Code](https://github.com/tonsky/FiraCode) (Depending on your preference, I use this font, partly because of font ligatures `<= ->` as in the picture and `@` is cool.)
+- After font download and installed, set font by going to `Setting -> Text Editor -> Font -> Font Family ใส่ Fira Code`
+- Font Ligatures (change symbol `<=` `->`) -> `Edit in settings.json` -> `"editor.fontLigatures": true`
 
-2.ไฮไลท์สี 
-- จากข้อก่อนหน้าไม่ต้องปิดหน้าต่าง settings.json
-- ให้คัดลอกนำไปใส่ได้เลย ( `,` จะต่อจาก `editor.fontLigatures": true`)
-- อยากปรับแต่งเพิ่มเติม [ดูที่นี่](https://github.com/SPGoding/datapack-language-server/wiki/Semantic-Tokens)
+2.**Syntax Highlighting Color**
+- From the previous verse, do not close the window settings.json
+- You can copy and insert it (Where `,` will continue from the back `Editor.fontLigatures ": true`)
+- Want to customize more [here](https://github.com/SPGoding/datapack-language-server/wiki/Semantic-Tokens)
 ```json
     ,
     "editor.semanticTokenColorCustomizations": {
@@ -65,7 +66,7 @@
         "statusBarItem.remoteBackground": "#3ea8ff"
     }
 ```
-3.ไฮไลท์คอมเมนต์ (ใส่ หลังจาก `}` ในข้อ 2 ได้เลย )
+3.**Highlighting Commment** (You can add after `}` in verse 2)
 ```json
     ,
     "commentAnchors.tags.list": [   
@@ -172,3 +173,6 @@
         ""
     ]
 ```
+## Note
+
+The reason for setting such as ANCHOR, TODO, SECTION to false is because it is the default of the extension that produces the same word highlight.

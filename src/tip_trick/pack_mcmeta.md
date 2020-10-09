@@ -1,15 +1,15 @@
-# เคล็ดลับไฟล์ pack.mcmeta
+# pack.mcmeta trick
 
-# เกี่ยวกับ
+# about
 
-เป็นลูกเล่นที่คุณสามารถนำไปใช้ได้
+It is a gimmick that you can use.
 
-# ใช้งานยังไง
+# Implementation
 
-ไฟล์ `pack.mcmeta` รองรับ JSON Text Component ด้วย
-ซึ่งสามารถนำไปใช้กับ `advancement` ได้ด้วยนะ 
+`pack.mcmeta` also support JSON Text Component. 
+Which can be applied to `Advancement` too.
 
-## แบบ ที่ 1
+## Type 1
 
 ```json
 {
@@ -32,11 +32,11 @@
 ```
 ![](./pack/1.png)
 
-ถ้าคุณใส่ `"description": ["",{` 2 บรรทัดล่างจะกลายเป็นสีค่าตั้งต้น
+If you add `description '': ["", {` the bottom two lines will become the default color.
 
 ![](./pack/1_1.png)
 
-## แบบ ที่ 2
+## Type 2
 
 ```json
 {
@@ -62,10 +62,9 @@
 ```
 ![](./pack/2.png)
 
-สำหรับเกมเวอร์ชั่น 1.16 ขึ้นไป
-คุณสามารถใช้ค่าสี *HEX* และ *Custom Font* ด้วย *Resource pack* ได้
+For game version 1.16+ You can use *HEX* color value and *Custom Font* with *Resource pack*.
 
-## ตัวอย่างการใช้งานสำหรับ Advancement
+## Example of use for Advancement
 
 ```json
 {
@@ -116,6 +115,6 @@
 ```
 ![](./pack/3.png)
 
-## หมายเหตุ
+## Note
 
-`\n` มีหน้าที่ขึ้นบรรทัดใหม่ แนะนำให้ใส่ไว้ข้างหลังรูปแบบโค๊ดจะสวยกว่า ถ้าใส่ข้างหน้า `n` จะอยู่ติดกับอักษรอื่น
+`\n` is for the new line. Recommend to put it behind the code pattern is more beautiful. If you put it in front of `n`, it will be attached to another text.

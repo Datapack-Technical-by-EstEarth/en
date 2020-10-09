@@ -1,3 +1,3 @@
-# เคล็ดลับ และ ลูกเล่น
+# Tip n Trick
 
-บอกเคล็ดลับและลูกๆต่างๆจากประสบการณ์ที่รู้และได้ใช้งาน
+Give me tips and tricks based on my experience and use.

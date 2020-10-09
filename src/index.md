@@ -1,8 +1,10 @@
-# เกี่ยวกับ
+# About
 
-หน้านี้สร้างขึ้นเพื่อ แนะนำ, สอน และ อธิบายเทคนิคดีๆ ในการเขียนดาต้าแพ็ค จากประสบการณ์ของผมที่ผ่านมาเพื่อให้การพัฒนากับการซ่อมบำรุงดีขึ้นและง่ายขึ้นในอนาคต
-ซึ่งทุกคนสามารถนำไปปรับและประยุกต์ใช้ได้ เป็นทางเลือกหนึ่งที่ไม่ได้บังคับใดๆ แต่มีจุดประสงค์เพื่อให้การปฎิบัติตาม [แบบแผนทางการ](https://mc-datapacks.github.io/th/) นั้นง่ายขึ้น ได้รับการตรวจสอบที่ง่ายขึ้นจาก Datapack Reviewer จากปัญหาบางอย่างที่เกิดขึ้นจากประสบการณ์ที่ตรวจสอบดาต้าแพ็คมา
+This page is created to *introduce*, *teach* and *explain good techniques*. To datapacking from my past experience in order to make development and maintenance better and easier in the future. Which everyone can adapt and apply Is one option  
+and **not force** it in any way.
 
-[ดิสคอร์ดไทย](https://discord.gg/KgbVpmz)
+And one more purpose of Tecnical advice to make it easier to follow [Official Conventions](https://mc-datapacks.github.io/th/) make it easier to get reviews from Datapack Reviewer.This has been compiled from some of the common issues from our experiences with datapack reviews.
 
-[ดิสคอร์ดตปท.](https://discord.gg/SnJQcfq)
+[Minecraft Datapacks](https://discord.gg/SnJQcfq)
+
+[Minecraft Datapacks TH](https://discord.gg/KgbVpmz)
