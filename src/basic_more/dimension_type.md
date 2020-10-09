@@ -1,3 +1,3 @@
-# ไฟล์ Dimension type
+# Dimension type
 
-เร็วๆนี้
+In the process of maintenance.

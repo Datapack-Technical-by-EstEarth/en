@@ -1,3 +1,3 @@
-# ดาต้าแพ็คขั้นพื้นฐาน
+# Datapacking Basic
 
-ส่วนนี้สำหรับสอนเขียนดาต้าแพ็ค เพื่อทำความรู้จักและเข้าใจในส่วนต่างๆ ในระดับเบื้องต้น
+This section is for teaching how to write a data pack. To get to know and understand each part at the introductory level.

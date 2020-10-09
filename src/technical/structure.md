@@ -1,11 +1,11 @@
-# โครงสร้างไฟล์ดาต้าแพ็ค
+# Datapack file structure
 
-## เกี่ยวกับ
+## About
 
-สำหรับแสดงตัวอย่างหนึ่งในโครงสร้างไฟล์ดาต้าแพ็คที่สวยงาม เป็นระเบียบ จัดกลุ่มได้ง่าย ง่ายต่อการอ่าน พัฒนา และ ซ่อมบำรุง
+For example, one of the beautiful file structures is easy to organize and group. Easy to read, develop and maintain.
 
-## ตัวอย่างที่เป็นไปได้ในแต่ละกรณี
+## Examples are possible in each case.
 
-### ดาต้าแพ็คหลายชุด
+### Multiple packs
 
-### ดาต้าแพ็คชุดเดียว
+### Standalone pack

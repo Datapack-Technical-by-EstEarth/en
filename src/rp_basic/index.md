@@ -1,3 +1,3 @@
-# Resource pack พื้นฐาน
+# Resource pack basic
 
-เร็วๆนี้
+In the process of maintenance.

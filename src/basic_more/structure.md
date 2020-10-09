@@ -1,3 +1,3 @@
-# ไฟล์ Structure *.nbt
+# Structure *.nbt
 
-เร็วๆนี้
+In the process of maintenance.
