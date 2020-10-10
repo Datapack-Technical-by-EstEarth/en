@@ -473,12 +473,71 @@ Which can be applied to <code>Advancement</code> too.</p>
 <p>I once thought I would stop making such suggestions. But Professor Boomber encouraged me.</p>
 <p><strong>Boomber:</strong> Personally, I think you should keep giving your advice. There will be someone like this sometime but most of the time your advice will be very beneficial to the datapacker. You shouldn't let one negative comment affect you.</p>
 <p>So I keep doing it. And hope you understand what I have given you.</p>
-<h1><a class="header" href="#datapack-file-structure" id="datapack-file-structure">Datapack file structure</a></h1>
+<h1><a class="header" href="#datapack-namespacing" id="datapack-namespacing">Datapack Namespacing</a></h1>
 <h2><a class="header" href="#about-2" id="about-2">About</a></h2>
+<p>There are a few issues with using namespaces regarding the <a href="technical/./structure.html">pack file structure</a> and follow <a href="https://mc-datapacks.github.io/en/conventions/datapack_advancement.html">Datapack Advancement</a>, this is my recommended technique.</p>
+<h2><a class="header" href="#multiple-packs" id="multiple-packs">Multiple packs</a></h2>
+<p><strong>Issue:</strong> Some packs use the <code>datapack_name</code> as their namespace.</p>
+<p><strong>Sub Issue:</strong> If you follow Datapack Advancement with defines 3 advancement nodes: <code>Root</code>, <code>Namespace</code> and <code>Datapack</code>.</p>
+<p>And because datapack node <strong>must not</strong> be in <code>/data/global/advancements/folder</code>. </p>
+<p>Causing the need to take this file to <code>/data/&lt;namespace&gt;/advancements/</code></p>
+<p>It became like this <code>/data/&lt;datapack_name&gt;/advancements/&lt;datapack_name&gt;.json</code></p>
+<h3><a class="header" href="#solution" id="solution">Solution</a></h3>
+<p><strong>Fact:</strong> It's creator name.</p>
+<pre><code>data
+ ├ &lt;namespace&gt; &lt;- It doesn't make sense to set it as datapack_name.
+ │    ╰ advancements         
+ │        ╰ &lt;datapack_name&gt;.json
+ ├ &lt;global&gt;
+ │    ╰ advancements
+ │        ├ &lt;namespace&gt;.json &lt;- &quot;This is creator_head&quot; * That's why
+ │        ╰ root.json
+</code></pre>
+<p><strong>Because:</strong> If creator plan to write more datapacks, it will be very helpful when you work on workspace.</p>
+<p><img src="technical/./namespace/1.png" alt="" /></p>
+<p><strong>Result:</strong> <code>&lt;creator_name&gt;:&lt;datapack_name&gt;</code> When there are multiple packs, the name on front is to identify who created it and next it to tell what datapack it is. This will be explained further in <a href="technical/./structure.html">Pack file structure</a></p>
+<p><strong>Example pack:</strong> All <a href="https://www.planetminecraft.com/member/boomber360/">Boomber360</a>'s project.</p>
+<h2><a class="header" href="#standalone-pack" id="standalone-pack">Standalone pack</a></h2>
+<p>That means you can only do 1 pack, not do more, or combine everything in 1 pack.</p>
+<p><strong>Fact:</strong> Completely free with namespaces.</p>
+<pre><code>data
+ ├ &lt;namespace&gt; &lt;- It make sense to set it as datapack_name.
+ │    ╰ &lt;...&gt;
+ ├ &lt;global&gt;
+ │    ╰ advancements
+ │        ├ standalone 
+ │        │    ╰ &lt;datapack_node&gt;.json &lt;- &quot;This is datapack node&quot; * That's why completely free.
+ │        ╰ root.json
+</code></pre>
+<p><strong>Because:</strong> There is no more than 1 pack in your project.</p>
+<p><strong>Result:</strong> <code>&lt;datapack_name&gt;:&lt;every_internal_function&gt;</code> When there is 1 pack, which you may name it with, the <code>creator_name</code> and <code>datapack_name</code> mix or whatever. And everything under that name does not need to be identified. <code>&lt;datapack_name&gt;</code>, which makes you know exactly what this pack is, what functionality it comes from and who made it.</p>
+<p><strong>Example pack:</strong> <a href="https://www.planetminecraft.com/data-pack/the-creeper-s-code/">The Creeper's Code</a></p>
+<h2><a class="header" href="#scoreboard" id="scoreboard">Scoreboard</a></h2>
+<p><strong>Issue:</strong> Some packs use the <code>datapack_name</code> as their shortened namespace.</p>
+<p><strong>Sub Issue:</strong> Suppose the pack <code>Bounce block</code> uses objective as <code>bb.var</code>.
+Do you see the problem?</p>
+<p>What If <code>bb</code> is the namespace which is shortened from <code>boomber</code>.
+That's the problem.</p>
+<p><strong>Advice</strong>: Use namespace shortened from <em>your name</em> or <em>pen name</em>. If possible, short 2 characters due to 16 characters limitation.</p>
+<p><strong>Fact:</strong> Namespace conflicts can arise. But you can avoid it as much as possible.</p>
+<p><strong>Because:</strong> Static namespaces that are easier to control. Making it possible to eliminate the above problems.</p>
+<p><strong>Result:</strong> In all possibilities, It might give you a limit to tell what the objective is doing. But if managed well, you will be able to use a common objective for many tasks, not including the long-named fake_player scoreboard. If you name the objective well, fake_player will help you here.</p>
+<p><strong>Did you know</strong>: <code>fake_player</code> doesn't need to use namespace because it is already inside the objective namespace. <code>#</code><del><code>ee</code></del><code>.foo.bar ee.data</code></p>
+<h2><a class="header" href="#tag-1" id="tag-1">/tag</a></h2>
+<p><strong>Advice</strong>: If possible, include a full name. <code>tag @s add estearth.foo.bar</code></p>
+<p><strong>Because:</strong> It reduces the chance of conflicts from the length of the explicit name.</p>
+<h2><a class="header" href="#storage" id="storage">Storage</a></h2>
+<p>If let me advice, I hope this section will be useful to uninstall.</p>
+<p><strong>Advice</strong>: <code>estearth:&lt;datapack_name&gt; ee.&lt;path_storage_name&gt;</code> </p>
+<p><strong>Because:</strong> If you are using a Namespace, you can remove storage with a single command. Ex.: <code>data remove storage estearth:&lt;datapack_name&gt; ee</code>.</p>
+<p><strong>What if:</strong> If it's a standalone pack, an ex. from The Creeper's Code pack is interesting.
+<code>tcc:storage root.&lt;path_storage&gt;</code></p>
+<h1><a class="header" href="#datapack-file-structure" id="datapack-file-structure">Datapack file structure</a></h1>
+<h2><a class="header" href="#about-3" id="about-3">About</a></h2>
 <p>For example, one of the beautiful file structures is easy to organize and group. Easy to read, develop and maintain.</p>
 <h2><a class="header" href="#examples-are-possible-in-each-case" id="examples-are-possible-in-each-case">Examples are possible in each case.</a></h2>
-<h3><a class="header" href="#multiple-packs" id="multiple-packs">Multiple packs</a></h3>
-<h3><a class="header" href="#standalone-pack" id="standalone-pack">Standalone pack</a></h3>
+<h3><a class="header" href="#multiple-packs-1" id="multiple-packs-1">Multiple packs</a></h3>
+<h3><a class="header" href="#standalone-pack-1" id="standalone-pack-1">Standalone pack</a></h3>
 
                     </main>
 
