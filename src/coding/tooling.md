@@ -29,6 +29,9 @@ If you datapacking and want the code to look like this or customize it as you li
 
 ![](./program/window.png)
 
+0.**Color Theme**
+- `Color Theme -> Select "Dark+ (default dark)"`
+
 1.**Font**
 - Font [Fira Code](https://github.com/tonsky/FiraCode) (Depending on your preference, I use this font, partly because of font ligatures `<= ->` as in the picture and `@` is cool.)
 - After font download and installed, set font by going to `Setting -> Text Editor -> Font -> Font Family put Fira Code`
